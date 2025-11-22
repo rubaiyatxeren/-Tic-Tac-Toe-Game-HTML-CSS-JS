@@ -77,7 +77,7 @@ function checkGameOver() {
   const isTied = gameGrid.every((cell) => cell !== "");
   if (isTied) {
     gameInfo.innerText = `Game has been tied!`;
-    newButtonShow();
+    newGameBtn.classList.add("active");
     return true;
   }
   return false;
@@ -90,4 +90,5 @@ boxes.forEach((box, index) => {
 newGameBtn.addEventListener("click", initGame);
 
 initGame();
+
 
